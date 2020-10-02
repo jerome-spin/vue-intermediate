@@ -3,20 +3,15 @@
         <div class="modal-mask">
             <div class="modal-wrapper">
                 <div class="modal-container">
+                    <!-- Modal Header -->
                     <div class="modal-header">
                         <slot name="header">default header</slot>
                     </div>
-                </div>
 
-                <div class="modal-body">
-                    <slot name="body">default boy</slot>
-                </div>
-
-                <div class="modal-footer">
-                    <slot name="footer">
-                        default
-                        <button class="modal-default-button" @click="$emit('close')">OK</button>
-                    </slot>
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                        <slot name="body">default boy</slot>
+                    </div>
                 </div>
             </div>
         </div>
@@ -41,7 +36,7 @@
 }
 .modal-container {
     width: 300px;
-    margin: 0 auto;
+    margin: 0px auto;
     padding: 20px 30px;
     background-color: #fff;
     border-radius: 2px;
@@ -53,7 +48,6 @@
     margin-top: 0;
     color: #42b983;
 }
-
 .modal-body {
     margin: 20px 0;
 }
@@ -61,7 +55,7 @@
     float: right;
 }
 
-/**
+/*
  * The following styles are auto-applied to elements with
  * transition="modal" when their visibility is toggled
  * by Vue.js.
@@ -72,7 +66,6 @@
 .modal-enter {
     opacity: 0;
 }
-
 .modal-leave-active {
     opacity: 0;
 }
